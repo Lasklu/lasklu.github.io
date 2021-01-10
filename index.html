@@ -5,6 +5,7 @@
     <script>
         $(function() {
             $("#includedContent").load("./deaths_state.html");
+            $("#explanation").load("./explanations/deaths_state_explanation.html");
         });
     </script>
     <!-- CSS only -->
@@ -41,19 +42,29 @@
                 $("#explanation").load("./explanations/deaths_state_explanation.html");
             });
         }
+
+        function load_our_work() {
+            $(function() {
+                $("#includedContent").load("./explanations/our_work.html");
+                $("#explanation").load("./explanations/our_work_explanation.html");
+            });
+        }
     </script>
     <div id="col-1">
-        <h1>COVID IN THE US</h1>
+        <h1>COVID-19 IN THE US</h1>
         <br>
+
         <div class="dropdown">
-            <button class="dropbtn">Wählen sie einen Visualisierung</button>
+            <button class="dropbtn">Wähle eine Visualisierung</button>
             <div class="dropdown-content">
                 <button class="button" onclick="load_deaths_state()">Todesfälle pro Staat</button>
-                <button class="button" onclick="load_map_usa_per_state()">Covid & Trump</button>
-                <button class="button" onclick="load_plot_scatter_tests()">Todesfälle</button>
-                <button class="button" onclick="load_plot_state_line()">Covid & Biden</button>
+                <button class="button" onclick="load_plot_state_line()">Covid & Trump</button>
+                <button class="button" onclick="load_map_usa_per_state()">Covid & Trump - states</button>
+                <button class="button" onclick="load_plot_scatter_tests()">Trump vs. Biden</button>
+
             </div>
         </div>
+        <button class="button" onclick="load_our_work()">Unsere Arbeit erklärt</button>
         <br>
         <br>
         <h5>Dies ist ein Dashboard, das die Entwicklung der Covid19-Pandemie in den USA und deren Einfluss auf die US-Politik visualisieren soll.</h5>
